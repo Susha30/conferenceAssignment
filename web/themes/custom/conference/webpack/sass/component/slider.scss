@@ -1,0 +1,366 @@
+@import '../global/default_variables.scss';
+
+.view-conference,
+.view--conference-for-mobile  {
+	max-width: 100%;
+	margin: 0 auto;
+	div#views_slideshow_cycle_teaser_section_conference-block_1 {
+	  width: 100%;
+	}
+	.views_slideshow_cycle_no_display, 
+	.views_slideshow_cycle_hidden, 
+	.views_slideshow_cycle_controls, 
+	.views_slideshow_cycle_image_count,
+	.views_slideshow_cycle_slide {
+		width: 100% !important;
+    text-align: center;
+    @media screen and(max-width: $screen-xs-max) {
+      width: inherit !important;
+		}
+	}
+  .views_slideshow_cycle_slide {
+    &:hover { 
+      display: flex !important;
+      justify-content: center; 
+    }
+  } 
+	.views-row {
+    display: inline-block;
+    width: 30%;
+    max-width: 22.5rem;
+    border: 0.063rem solid;
+    border-color: $boxshadow;
+    margin-right: 2.5rem;
+    @media screen and (max-width: $screen-sm-max) {
+      margin-right: 1.563rem;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      box-shadow: 0.313rem 0.313rem 0.438rem 0 $boxshadow;
+    }
+		@media screen and(max-width: $screen-xs-max) {
+      float: left;
+      width: auto;
+		}
+  }
+  .conference-image {
+    position: relative;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .conference-info-wrapper {
+    border-bottom: 0.063rem solid;
+    border-bottom-color: $boxshadow;
+    position: relative;
+   
+    h2 {
+      font-size: 1.125rem;
+    }
+    .conference-fields-wrapper {
+      padding: 1.25rem 1.5rem;
+      text-align: left;
+      @media screen and (max-width: $screen-sm-max) {
+        padding: 0.875rem;
+
+        h2{
+          font-size: 0.875rem;
+        }
+        > div,
+        .datetime{
+          font-size: 0.75rem;
+          align-items: center;
+        }
+      }
+      > div {
+        display: flex;
+      }
+    }
+  }
+  .managment {
+    display: inline-block;
+    content: '';
+    background: url('/themes/custom/conference/images/rocket.svg') no-repeat;
+    height: 1.75rem;
+    width: 1.75rem;
+    background-position: center;
+    margin-right: 0.313rem;
+  }
+  .date {
+    display: inline-block;
+    content: '';
+    background: url('/themes/custom/conference/images/calendar.svg') no-repeat;
+    height: 1.75rem;
+    width: 1.75rem;
+    background-position: center;
+    margin-right: 0.313rem;
+  }
+  .map {
+    display: inline-block;
+    content: '';
+    background: url('/themes/custom/conference/images/map.svg') no-repeat;
+    height: 1.75rem;
+    width: 1.75rem;
+    background-position: center;
+    margin-right: 0.313rem;
+  }
+  .social-icon {
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    bottom: -3.25rem;
+    left: 0;
+    width: 100%;
+    border-top: 0.063rem solid;
+    border-top-color: $boxshadow;
+    .like-icon {
+      padding: 0.313rem 1.5rem;
+      display: block;
+      border-right: 0.063rem solid $boxshadow;
+      text-align: center;
+      height: 3.25rem;
+    }
+    .download-icon {
+      padding: 0 1.5rem;
+      display: block;
+      text-align: center;
+      border-right: 0.063rem solid $boxshadow;
+      height: 3.25rem;
+    }
+    .share-icon {
+      padding: 0 18px;
+      width: 3.438rem;
+      text-align: center;
+      border-right: 0.063rem solid $boxshadow;
+      height: 3.25rem;
+    }
+    .like {
+      display: inline-block;
+      content: '';
+      background: url('/themes/custom/conference/images/like.svg') no-repeat;
+      height: 100%;
+      width: 1.625rem;
+      background-position: center;
+      &:hover {
+        background: url('/themes/custom/conference/images/like-hover.svg') no-repeat;
+        background-position: center;
+      }
+    }
+    .share {
+      display: inline-block;
+      content: '';
+      background: url('/themes/custom/conference/images/share.svg') no-repeat;
+      height: 90%;
+      width: 1.625rem;
+      background-position: center;
+      &:hover {
+        background: url('/themes/custom/conference/images/share-hover.svg') no-repeat;
+        background-position: center;
+      }
+    }
+    .download {
+      display: inline-block;
+      content: '';
+      background: url('/themes/custom/conference/images/download.svg') no-repeat;
+      height: 90%;
+      width: 1.75rem;
+      background-position: center;
+      &:hover {
+        background: url('/themes/custom/conference/images/download-hover.svg') no-repeat;
+        background-position: center;
+      }
+    }
+    .view-more {
+      a {
+        color: $linkcolor;
+        @media screen and (max-width: $screen-xs-max) {
+          font-size: 0.75rem;
+        }
+      }
+      display: inline-block;
+      padding: 0 0.938rem 0 0.938rem;
+      line-height: 1;
+    }
+	} 
+	.conference-container {
+		&:hover {
+      height: 390px;
+
+      @media screen and (max-width: $screen-xs-max) {
+        height: 24.375rem;
+      }
+			.social-icon {
+				display: flex;
+        position: static;
+			}
+      .conference-info-wrapper {
+        top: -3.25rem;
+      }
+		}
+	}
+	.views_slideshow_cycle_teaser_section {
+		max-width: 100%;
+    width: 100% !important;
+    margin: 0 auto;
+    @media screen and (max-width: $screen-xs-max) { 
+      overflow: auto !important;
+    }
+	}
+  .views-slideshow-controls-top {
+    position: relative;
+  }
+  .views_slideshow_controls_text {
+    width: 100%;
+    z-index: 4;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    .views_slideshow_controls_text_previous{
+      a {
+        font-size: 0;
+        display: inline-block;
+        background: url('/themes/custom/conference/images/left.svg') no-repeat;
+        width: 1.875rem;
+        height: 1.875rem;
+        background-position: center;
+        cursor: pointer;
+        &:active {
+          padding: 1.5rem;
+          border: 0.25rem solid;
+          border-radius: 3.125rem;
+          transition: border 0.2s ease 1ms;
+        }
+      }
+    }
+    .views_slideshow_controls_text_next {
+      a {
+        font-size: 0;
+        display: inline-block;
+        background: url('/themes/custom/conference/images/right.svg') no-repeat;
+        width: 1.875rem;
+        height: 1.875rem;
+        cursor: pointer;
+        &:active {
+          padding: 1.5rem;
+          border: 0.25rem solid;
+          border-radius: 3.125rem;
+          transition: border 0.2s ease 1ms;
+          background-position: center;
+        }
+      }
+    }
+    .views_slideshow_controls_text_pause {
+      display: none;
+    }
+  }
+  
+  .conference-fee {
+    position: absolute;
+    top: 0.313rem;
+    background: transparent;
+    right: 0.625rem;
+
+    .free,
+    .valueF {
+      width: auto;
+      padding: 0.188rem 0.625rem;
+      color: #fff;
+      background: transparent;
+      border: 0.063rem solid $white;
+      font-size: 0.75;
+      text-transform: uppercase;
+    }
+  }
+}
+.featured-onference {
+  .conference-image {
+    i {
+      background: url('/themes/custom/conference/images/star.svg') no-repeat ;
+      position: absolute;
+      display: inline-block;
+      content: '';
+      background-position: left;
+      background-size: cover;
+      width: 0.938rem;
+      height: 0.938rem;
+      left: 0.5rem;
+      top: 0.375rem;
+    }
+    &::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      border-left: 3.125rem solid $lightgreen;
+      border-right: 20px solid transparent;
+      border-bottom: 3.125rem solid transparent;
+    }
+  }
+}
+.view-conference {
+  @media screen and (min-width: $screen-xs-max) and (max-width: $screen-sm-max){
+    .social-icon {
+      .like-icon {
+        padding: 0.313rem 0.313rem;
+        width: 3.75rem;
+      }
+      .share-icon,
+      .download-icon {
+        padding: 0 0.625rem;
+      }
+      .like,
+      .download,
+      .share {
+        background-size: 80%;
+      }
+      .view-more {
+        a {
+          font-size: 0.75rem;
+        }
+      }
+    }
+    .conference-container {
+      &:hover {
+        height: 18.75rem;
+      }
+    }
+  }
+}
+.view--conference-for-mobile {
+  .views_slideshow_cycle_slide {
+    display: flex !important;
+    justify-content: center;
+  }
+  .item-list {
+    margin-top: 1.25rem;
+  }
+  .views-slideshow-pager-bullets {
+    flex-direction: row;
+    justify-content: center;
+    li {
+      border-bottom: 0.063rem solid $blueborder;
+      background: $blueborder;
+      &.active {
+        background: $white;
+        cursor: default;
+        margin-top: 0.375rem;
+      }
+    }
+  }
+
+  .social-icon {
+    .like-icon,
+    .download-icon {
+      padding: 0.313rem 1.125rem;
+      width: 20%;
+    }
+    .share-icon {
+      padding: 0 0.938rem;
+      width: 20%;
+    }
+  }
+}

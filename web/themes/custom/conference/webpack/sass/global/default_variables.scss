@@ -1,0 +1,25 @@
+/* Media query breakpoints */
+$screen-lg: 1200px !default;
+$screen-lg-min: $screen-lg !default;
+$screen-lg-mid: 1340px !default;
+$screen-lg-mid-xl: 1380px !default;
+$screen-md: 992px !default;
+$screen-md-min: $screen-md !default;
+$screen-md-max: $screen-lg - 1 !default;
+$screen-sm: 768px !default;
+$screen-sm-min: $screen-sm !default;
+$screen-sm-max: $screen-md - 1 !default;
+$screen-xs: 480px !default;
+$screen-xs-min: $screen-xs !default;
+$screen-xs-max: $screen-sm - 1 !default;
+$screen-xss-max: 359px !default;
+
+
+/** Color Variables **/
+$boxshadow:  #ececec;
+$white: #ffffff;
+$lightgreen: #08D16F;
+$blueborder: #017FD5;
+$linkcolor: #0B80CF;
+$fontcolor: #424A55;
+$smalltextcolor: #7C8993;

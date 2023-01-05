@@ -1,0 +1,118 @@
+@import '../global/default_variables.scss';
+
+.path-frontpage {
+  .view-frontpage {
+    display: none;
+  }
+  .header-text-wrapper {
+    padding: 1.563rem 0.938rem;
+  }
+  .small-text {
+    font-family: 'Montserrat-Thin';
+    color: $smalltextcolor;
+  }
+  .toggle-buttons-for-conferences {
+    margin: 1.25rem auto 2.5rem;
+    border-bottom: 0.063rem solid $blueborder;
+
+    ul {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      list-style-type: none;
+      justify-content: center;
+      margin-bottom: 0;
+      line-height: 1;
+
+      li {
+        padding: 0.938rem;
+        flex-basis: 33%;
+        text-align: center;
+        line-height: 1;
+        @media screen and (max-width: $screen-xs-max) {
+          padding: 0.313rem;
+        }
+
+        a {
+          text-decoration: none;
+          color: $linkcolor;
+          @media screen and (max-width: $screen-sm-max) {
+            font-size: 1rem;
+          }
+          @media screen and (max-width: $screen-xs-max) {
+            font-size: 0.75rem;
+          }       
+        }
+        &.active {
+          position: relative;
+          display: flex;
+          align-items: center;
+          min-height: 2.625rem;
+          justify-content: center;
+          @media screen and (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
+            min-height: 4.25rem;
+          }
+          a {
+            color: $fontcolor;
+            font-size: 1.5rem;
+            transition: font-size 0.2s ease 1ms;
+            -webkit-transition: font-size 0.2s ease 1ms;
+            -moz-transition: font-size 0.2s ease 1ms;
+            &:active {
+              transition: border 0.2s ease 1ms;
+            }
+            @media screen and (max-width: $screen-sm-max) {
+              font-size: 1.125rem;
+            }
+            @media screen and (max-width: $screen-xs-max) {
+              font-size: 0.75rem;
+            }
+          }
+          &::before {
+            content: '';
+            display: inline-block;
+            height: 1.25rem;
+            width: 1.25rem;
+            background: $white;
+            border-bottom: 0.063rem solid $blueborder;
+            border-right: 0.063rem solid $blueborder;
+            transform: rotate(45deg);
+            position: absolute;
+            left: 50%;
+            right: auto;
+            bottom: -0.625rem;
+            @media screen and (max-width: $screen-xs-max) {
+              height: 0.625rem;
+              width: 0.625rem;
+              bottom: -15%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .recommended-conference,
+  .past-conference {
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  .mobile-view {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    @media screen and (max-width: $screen-xs-max) { 
+      display: block;
+      height: auto;
+    }
+  }
+  .desktop-view {
+    display: block;
+    height: auto;
+    @media screen and (max-width: $screen-xs-max) { 
+      display: block;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+}

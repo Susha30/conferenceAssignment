@@ -1,0 +1,92 @@
+# This file contains default .gitignore rules. To use it, copy it to .gitignore,
+# and it will cause files like your settings.php and user-uploaded files to be
+# excluded from Git version control. This is a common strategy to avoid
+# accidentally including private information in public repositories and patch
+# files.
+#
+# Because .gitignore can be specific to your site, this file has a different
+# name; updating Drupal core will not override your custom .gitignore file.
+
+# Ignore core when managing all of a project's dependencies with Composer
+# including Drupal core.
+# core
+
+# Ignore dependencies that are managed with Composer.
+# Generally you should only ignore the root vendor directory. It's important
+# that core/assets/vendor and any other vendor directories within contrib or
+# custom module, theme, etc., are not ignored unless you purposely do so.
+vendor/
+/web/core
+/web/libraries
+/web/modules/contrib
+/web/themes/contrib
+/web/profiles/contrib.
+
+
+# Ignore configuration files that may contain sensitive information.
+sites/*/settings*.php
+sites/*/services*.yml
+
+# Ignore paths that contain user-generated content.
+sites/*/files
+sites/*/private-files
+
+
+
+# Ignore scaffold files
+.gitattributes
+.editorconfig
+web/.eslintrc.json
+web/INSTALL.txt
+web/README.txt
+web/example.gitignore
+web/.csslintrc
+web/.editorconfig
+web/.eslintignore
+web/.eslintrc
+web/.htaccess
+web/.ht.router.php
+web/autoload.php
+web/index.php
+web/update.php
+web/web.config
+
+# Ignore configuration files that may contain sensitive information.
+web/sites/
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Thumbs.db
+._*
+
+# built theme lock files
+package-lock.json
+
+# Themes
+web/themes/custom/*/node_modules
+We/themes/custom/*/webpack/node_modules
+web/themes/custom/*/js/bootstrap.min.js
+web/themes/custom/*/js/jquery.min.js
+web/themes/custom/*/js/jquery.validate.min.js
+web/themes/custom/*/js/jquery.validate.js
+web/themes/custom/*/js/popper.min.js
+web/themes/custom/*/js/bootstrap.js
+web/themes/custom/*/js/jquery.js
+web/themes/custom/*/js/popper.js
+web/themes/custom/*/css/*
+web/themes/custom/*/js/*
+
+# If you prefer to store your .gitignore file in the sites/ folder, comment
+# or delete the previous settings and uncomment the following ones, instead.
+
+# Ignore configuration files that may contain sensitive information.
+# */settings*.php
+
+# Ignore paths that contain user-generated content.
+# */files
+# */private
+
+# Ignore SimpleTest multi-site environment.
+# simpletest

@@ -1,0 +1,27 @@
+@import '../global/default_variables.scss';
+
+@font-face {
+  font-family: 'Montserrat-regular';
+  src: url('/themes/custom/conference/fonts/Montserrat-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat-medium';
+  src: url('/themes/custom/conference/fonts/Montserrat-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat-thin';
+  src: url('/themes/custom/conference/fonts/Montserrat-Thin.ttf') format('truetype');
+}
+
+*,
+body {
+  background: $white;
+  font-family: 'Montserrat-regular';
+  font-size: 1rem;
+  color: $fontcolor;
+  line-height: 1.5;
+}
+a {
+  text-decoration: none;
+  line-height: 1;
+}

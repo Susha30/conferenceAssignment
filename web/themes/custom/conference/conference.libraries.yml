@@ -1,0 +1,5 @@
+global-styling:
+  js:
+    js/global.js: {}
+  css:
+    css/bootstrap.min.css: {}
